@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <div class="searchBox">
+    <input [(ngModel)]="searchText" placeholder="search movies..">
+  </div>
+  <ul class="list-group movieList" *ngFor="let movie of movies | searchFilter : {name: searchText, year:searchText,  category: searchText};">
+    <app-movie-list-item 
+    [movie]="movie"
+    (selected)="OnSelectedListItem($event)"
+    id="{{movie.id}}"
+    class="movieItem card text-center">
+    </app-movie-list-item>
+  </ul>
+</div>

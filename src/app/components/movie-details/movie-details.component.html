@@ -1,0 +1,12 @@
+
+<h5>Name: {{movie.name }}</h5>
+<h6>Year: {{movie.year}}</h6>
+<h6>Category: {{movie.category}}</h6>
+<h6>Description: {{movie.description}}</h6>
+<div>
+    <img src="{{movie.imageUrl}}" />
+</div>
+<iframe width="560" height="315" [src]="movie.promoUrl | youtubeSanitizer" frameborder="0" allowfullscreen></iframe>
+<h6>Rate: {{movie.rate}}</h6>
+<h6>Hour: {{movie.hour}}</h6>
+<button [routerLink]="['/movies']" type="button" class="btn btn-info">Back to List</button>

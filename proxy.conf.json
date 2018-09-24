@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "http://x-mode.co.il",
+      "secure": false,
+      "logLevel": "debug",
+      "pathRewrite": {"^/api" : ""}
+    }
+}
